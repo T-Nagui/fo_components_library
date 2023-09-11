@@ -1,15 +1,15 @@
 import React from 'react';
 import type { ButtonProps } from './Button.types';
-// import 'bootstrap.css';
+// import '~assets/style.scss';
 
-const Button = ({ type = 'button', size, disabled, primary, text, onClick, ...props }: ButtonProps) => {
+const Button = ({ type = 'button', size, disabled, color, text, onClick, ...props }: ButtonProps) => {
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
       {...props}
-      className="btn btn-default"
+      className={`btn btn-${size} btn-${size} btn-${color || 'default'}`}
     >
       {text}
     </button>
