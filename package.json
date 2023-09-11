@@ -1,9 +1,15 @@
 {
   "name": "fo_components_library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
   "type": "module",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/T-Nagui/fo_components_library.git"
+  },
+  "homepage": "https://github.com/T-Nagui/fo_components_library/",
   "scripts": {
     "test": "jest",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.jsx,.ts,.tsx, .",
@@ -12,8 +18,11 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "author": "neji trabelsi",
-  "license": "ISC",
+    "author": {
+    "name": "neji Trabelsi aka Funpro",
+    "email": "tech.neji.17@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^5.3.1"
   },
@@ -69,5 +78,8 @@
   },
   "resolutions": {
     "jackspeak": "2.1.1"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
