@@ -9,7 +9,6 @@ const packageJson = require('./package.json');
 export default [
   {
     input: 'src/index.ts',
-
     output: [
       {
         file: 'dist/cjs/index.js',
@@ -29,6 +28,8 @@ export default [
       typescript({
         typescript: require('typescript'),
         tsconfig: './tsconfig.json',
+        exclude: ["**/__tests__", "**/*.test.ts", 'stories/*.tsx', 'jest.config.ts', 'stories/*.ts'],
+
       }),
       terser(),
     ],

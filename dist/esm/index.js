@@ -1,2 +1,2 @@
-import"react";import"assets/style.scss";"function"==typeof SuppressedError&&SuppressedError;
+import"react";"function"==typeof SuppressedError&&SuppressedError;
 //# sourceMappingURL=index.js.map
