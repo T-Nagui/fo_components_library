@@ -14,11 +14,13 @@ export default [
         file: 'dist/cjs/index.js',
         format: 'cjs',
         sourcemap: true,
+         name: 'fo-components'
       },
       {
         file: 'dist/esm/index.js',
         format: 'esm',
         sourcemap: true,
+          name: 'fo-components'
       },
     ],
     plugins: [
@@ -36,13 +38,9 @@ export default [
     external: ['react', 'react-dom'],
   },
   {
-    input: 'src/index.ts',
-    output: [
-      {
-        file: 'dist/types.d.ts',
-        format: 'es',
-      },
-    ],
-    plugins: [dts.default()],
+    input: 'dist/esm/types/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: "esm" }],
+    external: [/\.scss$/],
+     plugins: [dts.default()],
   },
 ];
